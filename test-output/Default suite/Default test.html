@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Sun Feb 17 13:33:56 CET 2019</td>
+<td>Started on:</td><td>Sun Feb 17 17:03:26 CET 2019</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (935 ms)</td>
+<tr><td>Total time:</td><td>10 seconds (10609 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -75,8 +75,8 @@ function toggleAllBoxes() {
 <td><b>Instance</b></td>
 </tr>
 <tr>
-<td title='com.betsson.FE.runner.MainRunner.feature()'><b>feature</b><br>Test class: com.betsson.FE.runner.MainRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Betsson login functionality</td>
-<td><div><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+<td title='com.betsson.FE.runner.MainRunner.feature()'><b>feature</b><br>Test class: com.betsson.FE.runner.MainRunner<br>Test method: Runs Cucumber Feature<br>Parameters: Betsson Registration and Login functionality</td>
+<td><div><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: Unable to wait and click on the WebElement, using locator: &lt;[[ChromeDriver: chrome on XP (32ddc4906bd41364be4559be0befb9b6)] -&gt; xpath: /html/body/ion-app/ion-picker-cmp/div/div[1]/div[2]/button]&gt;
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -103,26 +103,14 @@ function toggleAllBoxes() {
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at com.betsson.FE.core.DriverFactory.getDriver(DriverFactory.java:55)
-	at com.betsson.FE.core.hooks.MasterHooks.setup(MasterHooks.java:12)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
-	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
-	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	... 25 more
-</pre></div><a href='#' onClick='toggleBox("stack-trace780843029", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace780843029'><pre>cucumber.runtime.CucumberException: java.lang.NullPointerException
+Caused by: java.lang.AssertionError: Unable to wait and click on the WebElement, using locator: &lt;[[ChromeDriver: chrome on XP (32ddc4906bd41364be4559be0befb9b6)] -&gt; xpath: /html/body/ion-app/ion-picker-cmp/div/div[1]/div[2]/button]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.betsson.FE.pageobject.base.BasePage.waitAndClickElement(BasePage.java:34)
+	at com.betsson.FE.pageobject.RegisterPage.SetDOB(RegisterPage.java:85)
+	at com.betsson.FE.steps.LoginSteps.i_register_a_new_user_successfully(LoginSteps.java:27)
+	at ?.When I register a new user successfully(Login.feature:6)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1905280105", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1905280105'><pre>cucumber.runtime.CucumberException: java.lang.AssertionError: Unable to wait and click on the WebElement, using locator: &lt;[[ChromeDriver: chrome on XP (32ddc4906bd41364be4559be0befb9b6)] -&gt; xpath: /html/body/ion-app/ion-picker-cmp/div/div[1]/div[2]/button]&gt;
 	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:69)
 	at cucumber.api.testng.AbstractTestNGCucumberTests.feature(AbstractTestNGCucumberTests.java:21)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -149,26 +137,14 @@ Caused by: java.lang.NullPointerException
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: java.lang.NullPointerException
-	at com.betsson.FE.core.DriverFactory.getDriver(DriverFactory.java:55)
-	at com.betsson.FE.core.hooks.MasterHooks.setup(MasterHooks.java:12)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at cucumber.runtime.Utils$1.call(Utils.java:40)
-	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
-	at cucumber.runtime.Utils.invoke(Utils.java:34)
-	at cucumber.runtime.java.JavaHookDefinition.execute(JavaHookDefinition.java:60)
-	at cucumber.runtime.Runtime.runHookIfTagsMatch(Runtime.java:224)
-	at cucumber.runtime.Runtime.runHooks(Runtime.java:212)
-	at cucumber.runtime.Runtime.runBeforeHooks(Runtime.java:202)
-	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:40)
-	at cucumber.runtime.model.CucumberFeature.run(CucumberFeature.java:165)
-	at cucumber.api.testng.TestNGCucumberRunner.runCucumber(TestNGCucumberRunner.java:63)
-	... 25 more
+Caused by: java.lang.AssertionError: Unable to wait and click on the WebElement, using locator: &lt;[[ChromeDriver: chrome on XP (32ddc4906bd41364be4559be0befb9b6)] -&gt; xpath: /html/body/ion-app/ion-picker-cmp/div/div[1]/div[2]/button]&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at com.betsson.FE.pageobject.base.BasePage.waitAndClickElement(BasePage.java:34)
+	at com.betsson.FE.pageobject.RegisterPage.SetDOB(RegisterPage.java:85)
+	at com.betsson.FE.steps.LoginSteps.i_register_a_new_user_successfully(LoginSteps.java:27)
+	at ?.When I register a new user successfully(Login.feature:6)
 </pre></div></td>
-<td>0</td>
+<td>9</td>
 <td>com.betsson.FE.runner.MainRunner@5939a379</td></tr>
 </table><p>
 </body>

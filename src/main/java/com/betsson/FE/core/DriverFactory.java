@@ -11,12 +11,16 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
 
+import com.betsson.FE.pageobject.HomePage;
 import com.betsson.FE.pageobject.LoginPage;
+import com.betsson.FE.pageobject.RegisterPage;
 
 public class DriverFactory {
 
 	public static WebDriver driver;
 	public static LoginPage loginPage;
+	public static HomePage homePage;
+	public static RegisterPage registerPage;
 
 	public WebDriver getDriver() {
 		try {
@@ -61,7 +65,8 @@ public class DriverFactory {
 		} finally {
 			driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
 			loginPage = PageFactory.initElements(driver, LoginPage.class);
-			
+			homePage = PageFactory.initElements(driver, HomePage.class);
+			registerPage = PageFactory.initElements(driver, RegisterPage.class);
 		}
 		return driver;
 	}

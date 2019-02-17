@@ -16,8 +16,8 @@ public class MasterHooks extends DriverFactory {
 	public void tearDown(Scenario scenario) {
 		try {
 				driver.manage().deleteAllCookies();
-				driver.quit();
-				driver = null;
+				//driver.quit();
+				//driver = null;
 		} catch (Exception e) {
 			System.out.println("Methods failed: tearDownFailure, Exception: " + e.getMessage());
 		}

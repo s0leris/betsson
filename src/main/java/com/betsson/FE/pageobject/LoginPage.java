@@ -9,9 +9,9 @@ import com.betsson.FE.pageobject.base.BasePage;
 
 public class LoginPage extends BasePage {
 
-	public @FindBy(id = "email") WebElement textbox_Email;
-	public @FindBy(id = "pass") WebElement textbox_Password;
-	public @FindBy(xpath = ".//input[@type='submit']") WebElement button_SignIn;
+	public @FindBy(xpath = ".//*[@test-id='login-username']") WebElement txt_Username;
+	public @FindBy(xpath = ".//*[@test-id='login-password']") WebElement txt_Password;
+	public @FindBy(xpath = ".//*[@test-id='login-submit']") WebElement btn_SignIn;
 	
 	public LoginPage() throws IOException
 	{
@@ -20,19 +20,19 @@ public class LoginPage extends BasePage {
 	
 	public LoginPage enterUsername(String username) throws Exception
 	{
-		sendKeysToWebElement(textbox_Email, username);
+		sendKeysToWebElement(txt_Username, username);
 		return new LoginPage();
 	}
 	
 	public LoginPage enterPassword(String password) throws Exception
 	{
-		sendKeysToWebElement(textbox_Email, password);
+		sendKeysToWebElement(txt_Password, password);
 		return new LoginPage();
 	}
 	
 	public void clickSignIn() throws InterruptedException
 	{
-		waitAndClickElement(button_SignIn);
+		waitAndClickElement(btn_SignIn);
 	}
 	
 	
